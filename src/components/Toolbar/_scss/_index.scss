@@ -1,0 +1,57 @@
+$text-align: center;
+.Toolbar{
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 50px;
+    background: #282c34;
+    color: white;
+
+    &__logo {
+        margin: 0 1em;
+    }
+
+    &__navigation {
+        display: flex;
+        height: 100%;
+        align-items: $text-align;
+        padding: 0 1em;
+
+        &-items ul {
+            display: flex;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        &-items ul li {
+            padding: 0 0.5em;
+        }
+
+        &-items ul li a {
+            color: white;
+            text-decoration: none;
+
+            &:hover {
+                color: red;
+            }
+        }
+    }
+
+    &__spacer {
+        flex: 1;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .Toolbar__navigation-items {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .Toolbar__navigation-button{
+        //display: none;
+    }
+}
