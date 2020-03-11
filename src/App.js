@@ -5,6 +5,7 @@ import Person from './components/Person/Person';
 import Toolbar from './components/Toolbar/Toolbar';
 import SideDrawer from './components/SideDrawer/SideDrawer';
 import Backdrop from './components/Backdrop/Backdrop';
+import ComponentLifeCycleDemo from './components/ComponentLifeCycleDemo/ComponentLifeCycleDemo';
 
 class App extends Component {
   state = {
@@ -31,12 +32,15 @@ class App extends Component {
     }
 
     return (
+      <>      
       <div className="Wrapper">
         <Toolbar drawerClickHandler={this.drawerToggleClickHandler} />
         <SideDrawer show={this.state.sideDrawerOpen} />
         {backDrop}
         <Person />
       </div>
+      <ComponentLifeCycleDemo />
+      </>
     );
   }
 }
